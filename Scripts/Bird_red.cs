@@ -8,7 +8,7 @@ public class Bird_red : MonoBehaviour
     // 鼠标位置
     private Vector2 position;
 
-    // 弹簧定点
+    // 弹簧定点，即右侧弹弓
     public Transform targetPos;
 
     // 距离弹簧定点的最长距离
@@ -18,6 +18,13 @@ public class Bird_red : MonoBehaviour
     private SpringJoint2D sp;
     // 刚体对象 
     private Rigidbody2D rg;
+
+    // 弹簧线组件
+    public LineRenderer leftLine;
+    public LineRenderer rightLine;
+
+    // 左侧弹弓
+    public Transform leftPos;
 
 
     private void Awake() {
@@ -55,23 +62,38 @@ public class Bird_red : MonoBehaviour
             position = pos * maxDis + targetPos.position;
         }
 
+        // 更新bird_red坐标位置
         transform.position = position;
+
+        // 绘制弹簧线
+        Line();
     }
 
     // 鼠标松开时
     private void OnMouseUp() {
-        
 
         // 刚体停掉动力学，即启动物理引擎
         rg.isKinematic = false;
 
-        // 停用弹簧
+        // 停用弹簧组件
         Invoke("Fly", 0.1f);
     }
 
     private void Fly()
     {
+        // 停用弹弓组件
         sp.enabled = false;
     }
 
+    // 绘制弹簧线
+    void Line()
+    {
+        // 弹簧线从弹弓右侧到bird_red连线
+        rightLine.SetPosition(0, targetPos.position);
+        rightLine.SetPosition(1, transform.position);
+
+        // 弹簧线从弹弓左侧到bird_red连线
+        leftLine.SetPosition(0, leftPos.position);
+        leftLine.SetPosition(1, transform.position);
+    }
 }
