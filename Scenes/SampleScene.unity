@@ -488,6 +488,8 @@ MonoBehaviour:
   maxSpeed: 8
   minSpeed: 4
   hurt: {fileID: -197115947, guid: bf7a92f99052a16409781348331c4e42, type: 3}
+  boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
+  score: {fileID: 1542924424759971473, guid: b4ead6aaf79ff91488402297bdd59088, type: 3}
 --- !u!1 &1155674364
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +653,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1083,7 +1085,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
