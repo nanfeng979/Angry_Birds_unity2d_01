@@ -14,8 +14,9 @@ public class Bird_red : MonoBehaviour
     // 距离弹簧定点的最长距离
     public float maxDis = 2f;
 
+    [HideInInspector]
     // 弹簧对象
-    private SpringJoint2D sp;
+    public SpringJoint2D sp;
     // 刚体对象 
     private Rigidbody2D rg;
 
@@ -25,6 +26,9 @@ public class Bird_red : MonoBehaviour
 
     // 左侧弹弓
     public Transform leftPos;
+
+    // 死亡特效boom
+    public GameObject boom;
 
 
     private void Awake() {
@@ -83,6 +87,9 @@ public class Bird_red : MonoBehaviour
     {
         // 停用弹弓组件
         sp.enabled = false;
+
+        // 一定时间后本体死亡
+        Invoke("Die", 4f);
     }
 
     // 绘制弹簧线
@@ -95,5 +102,18 @@ public class Bird_red : MonoBehaviour
         // 弹簧线从弹弓左侧到bird_red连线
         leftLine.SetPosition(0, leftPos.position);
         leftLine.SetPosition(1, transform.position);
+    }
+
+    // 本体死亡
+    void Die()
+    {
+        // 删除List的本体
+        GameObjectManager.instance.bird_Reds.Remove(this);
+        // 摧毁本体
+        Destroy(gameObject);
+        // 摧毁后产生爆炸特效
+        Instantiate(boom, transform.position, Quaternion.identity);
+        // 检查下一步动作
+        GameObjectManager.instance.afterBirdFly();
     }
 }
