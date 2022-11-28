@@ -15,6 +15,12 @@ public class GameObjectManager : MonoBehaviour
     // bird_red一开始时所在的位置
     private Vector3 bird_start_pos;
 
+
+    // 获取结算界面
+    public GameObject win;
+    public GameObject lose;
+
+
     private void Awake() {
         instance = this;
         // 获得bird_red一开始时所在的位置
@@ -56,6 +62,7 @@ public class GameObjectManager : MonoBehaviour
         if(pig_Greens.Count <= 0)
         {
             // pig_Greens没有子对象时
+            win.SetActive(true);
             Debug.Log("赢了");
         }
         if(bird_Reds.Count >= pig_Greens.Count)
@@ -64,6 +71,7 @@ public class GameObjectManager : MonoBehaviour
             // 初始化
             init();
         } else {
+            lose.SetActive(true);
             Debug.Log("输了");
         }
     }
