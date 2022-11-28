@@ -384,6 +384,8 @@ MonoBehaviour:
   - {fileID: 1833024599}
   pig_Greens:
   - {fileID: 1037098389}
+  leftLine: {fileID: 1268736719}
+  rightLine: {fileID: 2128725664}
 --- !u!4 &942008098
 Transform:
   m_ObjectHideFlags: 0

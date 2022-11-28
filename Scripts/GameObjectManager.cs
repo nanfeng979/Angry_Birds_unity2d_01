@@ -12,8 +12,13 @@ public class GameObjectManager : MonoBehaviour
     // 绿猪数组
     public List<Pig_green> pig_Greens;
 
+    // bird_red一开始时所在的位置
+    private Vector3 bird_start_pos;
+
     private void Awake() {
         instance = this;
+        // 获得bird_red一开始时所在的位置
+        bird_start_pos = bird_Reds[0].transform.position;
     }
 
     private void Start() {
@@ -33,6 +38,8 @@ public class GameObjectManager : MonoBehaviour
                 // 启用弹簧和脚本组件
                 bird_red.enabled = true;
                 bird_red.sp.enabled = true;
+                // 改变下一个bird_red的位置，使得不会受到弹簧很大的拉力
+                bird_red.transform.position = bird_start_pos;
             }
             else
             {

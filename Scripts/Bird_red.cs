@@ -81,6 +81,10 @@ public class Bird_red : MonoBehaviour
 
         // 停用弹簧组件
         Invoke("Fly", 0.1f);
+
+        // 停用弹簧线组件
+        leftLine.enabled = false;
+        rightLine.enabled = false;
     }
 
     private void Fly()
@@ -95,6 +99,10 @@ public class Bird_red : MonoBehaviour
     // 绘制弹簧线
     void Line()
     {
+        // 启用弹簧线组件
+        leftLine.enabled = true;
+        rightLine.enabled = true;
+
         // 弹簧线从弹弓右侧到bird_red连线
         rightLine.SetPosition(0, targetPos.position);
         rightLine.SetPosition(1, transform.position);
