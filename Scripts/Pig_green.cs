@@ -42,6 +42,8 @@ public class Pig_green : MonoBehaviour
     }
 
     void Dead() {
+        // 删除List的本体
+        GameObjectManager.instance.pig_Greens.Remove(this);
         // 摧毁自身
         Destroy(gameObject);
 
@@ -49,7 +51,11 @@ public class Pig_green : MonoBehaviour
         Instantiate(boom, transform.position, Quaternion.identity);
 
         // 在头顶上显示分数，1.5s之后摧毁
-        GameObject scoreObject = Instantiate(score, transform.position + new Vector3(0, 0.7f, 0) , Quaternion.identity);
-        Destroy(scoreObject, 1.5f);
+        if(score)
+        {
+            GameObject scoreObject = Instantiate(score, transform.position + new Vector3(0, 0.7f, 0) , Quaternion.identity);
+            Destroy(scoreObject, 1.5f);
+        }
+        
     }
 }

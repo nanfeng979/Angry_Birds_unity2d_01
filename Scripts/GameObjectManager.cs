@@ -53,11 +53,10 @@ public class GameObjectManager : MonoBehaviour
     public void afterBirdFly()
     {
         // 检查pig_Greens与bird_Reds的数量
-        if(pig_Greens.Exists(t => t == null))
+        if(pig_Greens.Count <= 0)
         {
             // pig_Greens没有子对象时
             Debug.Log("赢了");
-            return;
         }
         if(bird_Reds.Count >= pig_Greens.Count)
         {
