@@ -30,6 +30,9 @@ public class Bird_red : MonoBehaviour
     // 死亡特效boom
     public GameObject boom;
 
+    // 是否允许被鼠标拖拽
+    private bool canBeDrag = true;
+
 
     private void Awake() {
         sp = GetComponent<SpringJoint2D>();
@@ -53,6 +56,9 @@ public class Bird_red : MonoBehaviour
 
     // 鼠标按住时
     private void OnMouseDrag() {
+        // 判断是否允许被拖拽
+        if(!canBeDrag) return;
+
         // 将位置改成世界坐标轴
         position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         // 更新bird_red坐标
@@ -89,6 +95,9 @@ public class Bird_red : MonoBehaviour
 
     private void Fly()
     {
+        // 禁止被拖拽
+        canBeDrag = false;
+
         // 停用弹弓组件
         sp.enabled = false;
 
