@@ -12,6 +12,8 @@ public class GameObjectManager : MonoBehaviour
     // 绿猪数组
     public List<Pig_green> pig_Greens;
 
+    
+
     // bird_red一开始时所在的位置
     private Vector3 bird_start_pos;
 
@@ -19,6 +21,8 @@ public class GameObjectManager : MonoBehaviour
     // 获取结算界面
     public GameObject win;
     public GameObject lose;
+    // 星星数组界面
+    public GameObject[] starts;
 
 
     private void Awake() {
@@ -63,6 +67,7 @@ public class GameObjectManager : MonoBehaviour
         {
             // pig_Greens没有子对象时
             win.SetActive(true);
+            showStarts();
             Debug.Log("赢了");
         }
         if(bird_Reds.Count >= pig_Greens.Count)
@@ -73,6 +78,24 @@ public class GameObjectManager : MonoBehaviour
         } else {
             lose.SetActive(true);
             Debug.Log("输了");
+        }
+    }
+
+    // 显示星星个数函数
+    public void showStarts() {
+        // 执行协程函数showStartsByTime
+        StartCoroutine("showStartsByTime");
+    }
+
+    // 协程函数
+    IEnumerator showStartsByTime() {
+        // 根据游戏逻辑显示星星个数，目前暂且全部显示
+        for(int i = 0; i < 3; i++)
+        {
+            // 等待0.2f执行
+            yield return new WaitForSeconds(0.3f);
+            // 显示星星
+            starts[i].SetActive(true);
         }
     }
 }
