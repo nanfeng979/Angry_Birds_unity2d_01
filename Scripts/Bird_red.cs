@@ -33,6 +33,9 @@ public class Bird_red : MonoBehaviour
     // 是否允许被鼠标拖拽
     private bool canBeDrag = true;
 
+    // 相机滑动速率
+    public float smooth = 3;
+
 
     private void Awake() {
         sp = GetComponent<SpringJoint2D>();
@@ -47,6 +50,14 @@ public class Bird_red : MonoBehaviour
             // Time.timeScale = 1; // 恢复正常时间
             return;
         }
+
+        // 相机跟随
+        // 小鸟的x轴位置
+        float posX = transform.position.x;
+        // 修改相机的位置  // Lerp()平滑函数；Clamp()区间函数
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position,
+            new Vector3(Mathf.Clamp(posX, 0, 15), Camera.main.transform.position.y, Camera.main.transform.position.z),
+            smooth * Time.deltaTime);
     }
 
     private void OnMouseDown() {
