@@ -18,7 +18,7 @@ public class Bird_red : MonoBehaviour
     // 弹簧对象
     public SpringJoint2D sp;
     // 刚体对象 
-    private Rigidbody2D rg;
+    protected Rigidbody2D rg;
 
     // 弹簧线组件
     public LineRenderer leftLine;
@@ -40,6 +40,8 @@ public class Bird_red : MonoBehaviour
     public AudioClip select;
     public AudioClip fly;
 
+    // 是否能使用技能
+    private bool canUseSkill = false;
 
     private void Awake() {
         sp = GetComponent<SpringJoint2D>();
@@ -62,6 +64,21 @@ public class Bird_red : MonoBehaviour
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position,
             new Vector3(Mathf.Clamp(posX, 0, 15), Camera.main.transform.position.y, Camera.main.transform.position.z),
             smooth * Time.deltaTime);
+
+        // 判断是能使用技能
+        if(canUseSkill)
+        {
+            // 判断是否按下鼠标左键
+            if(Input.GetMouseButtonDown(0))
+            {
+                useSkill();
+            }
+        }
+    }
+    
+    // 碰到物体时
+    private void OnCollisionEnter(Collision other) {
+        canUseSkill = false;
     }
 
     private void OnMouseDown() {
@@ -111,8 +128,12 @@ public class Bird_red : MonoBehaviour
         rightLine.enabled = false;
     }
 
+    // 小鸟飞行
     private void Fly()
     {
+        // 正在飞
+        canUseSkill = true;
+
         // 播放音效
         GameObjectManager.instance.AudioPlay(fly);
 
@@ -153,5 +174,13 @@ public class Bird_red : MonoBehaviour
         Instantiate(boom, transform.position, Quaternion.identity);
         // 检查下一步动作
         GameObjectManager.instance.afterBirdFly();
+    }
+
+    // 使用技能
+    public virtual void useSkill()
+    {
+        Debug.Log("yeah");
+        // 只能执行一次技能
+        canUseSkill = false;
     }
 }

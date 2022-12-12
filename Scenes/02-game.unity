@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bird_Reds:
   - {fileID: 538473121}
-  - {fileID: 438067990}
+  - {fileID: 0}
   - {fileID: 1488757440}
   pig_Greens:
   - {fileID: 1837841776}
@@ -1316,37 +1316,15 @@ GameObject:
   - component: {fileID: 438067994}
   - component: {fileID: 438067993}
   - component: {fileID: 438067992}
-  - component: {fileID: 438067990}
   - component: {fileID: 438067991}
+  - component: {fileID: 438067996}
   m_Layer: 0
-  m_Name: Bird_red (3)
+  m_Name: YellowBird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &438067990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438067989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5d2fb71305135b48bf12685a4b23b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPos: {fileID: 1289258943}
-  maxDis: 2
-  sp: {fileID: 0}
-  leftLine: {fileID: 397101023}
-  rightLine: {fileID: 927787099}
-  leftPos: {fileID: 224594796}
-  boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
-  smooth: 3
-  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
-  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!58 &438067991
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1362,7 +1340,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.19
+  m_Radius: 0.28
 --- !u!231 &438067992
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1445,7 +1423,7 @@ SpriteRenderer:
   m_SortingLayerID: -1017948225
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1012215107, guid: bf7a92f99052a16409781348331c4e42, type: 3}
+  m_Sprite: {fileID: 1965189846, guid: bf7a92f99052a16409781348331c4e42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1471,6 +1449,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &438067996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438067989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b02d685baedac04ab60f6601e76c46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPos: {fileID: 1289258943}
+  maxDis: 2
+  sp: {fileID: 0}
+  leftLine: {fileID: 397101023}
+  rightLine: {fileID: 927787099}
+  leftPos: {fileID: 224594796}
+  boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
+  smooth: 3
+  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!1001 &467796292
 PrefabInstance:
   m_ObjectHideFlags: 0
