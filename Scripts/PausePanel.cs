@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PausePanel : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class PausePanel : MonoBehaviour
 
     public void Retry()
     {
-
+        // 恢复
+        Time.timeScale = 1;
+        SceneManager.LoadScene(2);
     }
 
     // 点击Pause按钮
@@ -57,6 +60,6 @@ public class PausePanel : MonoBehaviour
 
     public void Home()
     {
-
+        SceneManager.LoadScene(1);
     }
 }
