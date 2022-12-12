@@ -20,6 +20,11 @@ public class Pig_green : MonoBehaviour
     // 获得分数对象
     public GameObject score;
 
+    // 获得音效
+    public AudioClip hurtAudio;
+    public AudioClip dead;
+    public AudioClip birdCollision;
+
 
     private void Awake() {
         // 拿到自身的精灵组件
@@ -28,6 +33,14 @@ public class Pig_green : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         Debug.Log(other.relativeVelocity.magnitude);
+
+        // 如果是碰到小鸟 // 因为障碍物也挂用了此函数，所以障碍物也能发出音效
+        if(other.gameObject.tag == "Player")
+        {
+            // 播放音效
+            GameObjectManager.instance.AudioPlay(birdCollision);
+        }
+
         // 判断与碰撞对象之间的相对速度 relativeVelocity是相对速度，是一个向量，magnitude改成数值
         if(other.relativeVelocity.magnitude > maxSpeed)
         {
@@ -37,11 +50,17 @@ public class Pig_green : MonoBehaviour
         } else if(other.relativeVelocity.magnitude > minSpeed) {
             // 超过minSpeed时，变成受伤样式
             render.sprite = hurt;
+
+            // 播放音效
+            GameObjectManager.instance.AudioPlay(hurtAudio);
         }
 
     }
 
     void Dead() {
+        // 播放音效
+        GameObjectManager.instance.AudioPlay(dead);
+
         // 删除List的本体
         GameObjectManager.instance.pig_Greens.Remove(this);
         // 摧毁自身

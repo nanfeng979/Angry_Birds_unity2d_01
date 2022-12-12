@@ -109,4 +109,10 @@ public class GameObjectManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    // 播放音效
+    public void AudioPlay(AudioClip clip)
+    {
+        AudioSource.PlayClipAtPoint(clip, transform.position);
+    }
 }

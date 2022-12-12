@@ -36,6 +36,10 @@ public class Bird_red : MonoBehaviour
     // 相机滑动速率
     public float smooth = 3;
 
+    // 获得音效
+    public AudioClip select;
+    public AudioClip fly;
+
 
     private void Awake() {
         sp = GetComponent<SpringJoint2D>();
@@ -69,6 +73,9 @@ public class Bird_red : MonoBehaviour
     private void OnMouseDrag() {
         // 判断是否允许被拖拽
         if(!canBeDrag) return;
+
+        // 播放音效
+        GameObjectManager.instance.AudioPlay(select);
 
         // 将位置改成世界坐标轴
         position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -106,6 +113,9 @@ public class Bird_red : MonoBehaviour
 
     private void Fly()
     {
+        // 播放音效
+        GameObjectManager.instance.AudioPlay(fly);
+
         // 禁止被拖拽
         canBeDrag = false;
 

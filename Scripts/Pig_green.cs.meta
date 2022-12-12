@@ -3,7 +3,13 @@ guid: 1d0aff6e7c0475a45869f286c737dddb
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hurt: {instanceID: 0}
+  - boom: {instanceID: 0}
+  - score: {instanceID: 0}
+  - hurtAudio: {fileID: 8300000, guid: c1a5f2757fb06fd45812883f28dbf66b, type: 3}
+  - dead: {fileID: 8300000, guid: 10ea50ad52f85f04d99128c58ee3b632, type: 3}
+  - birdCollision: {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

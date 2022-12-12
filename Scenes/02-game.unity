@@ -960,6 +960,10 @@ PrefabInstance:
       value: -1017948225
       objectReference: {fileID: 0}
     - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
       propertyPath: hurt
       value: 
       objectReference: {fileID: -1642029259, guid: 9df880868bd1b6944a1b45e61cb7a50d, type: 3}
@@ -971,6 +975,14 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: hurtAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 53dea70923c95cb45864ff65eeb38785, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: birdCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
 --- !u!1 &342539716
@@ -1332,6 +1344,9 @@ MonoBehaviour:
   rightLine: {fileID: 927787099}
   leftPos: {fileID: 224594796}
   boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
+  smooth: 3
+  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!58 &438067991
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1540,6 +1555,10 @@ PrefabInstance:
       value: -1017948225
       objectReference: {fileID: 0}
     - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
       propertyPath: hurt
       value: 
       objectReference: {fileID: 2086619421, guid: 9df880868bd1b6944a1b45e61cb7a50d, type: 3}
@@ -1551,6 +1570,14 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: hurtAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 53dea70923c95cb45864ff65eeb38785, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: birdCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
     - target: {fileID: 8418270671087588175, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
       propertyPath: m_Mass
       value: 3
@@ -1574,7 +1601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &469024076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1669,6 +1696,9 @@ MonoBehaviour:
   rightLine: {fileID: 927787099}
   leftPos: {fileID: 224594796}
   boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
+  smooth: 3
+  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!58 &538473122
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2022,6 +2052,10 @@ PrefabInstance:
       value: -1017948225
       objectReference: {fileID: 0}
     - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
       propertyPath: hurt
       value: 
       objectReference: {fileID: -1642029259, guid: 9df880868bd1b6944a1b45e61cb7a50d, type: 3}
@@ -2033,6 +2067,14 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: hurtAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 53dea70923c95cb45864ff65eeb38785, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: birdCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
 --- !u!1 &766088257
@@ -2377,6 +2419,9 @@ MonoBehaviour:
   hurt: {fileID: -197115947, guid: bf7a92f99052a16409781348331c4e42, type: 3}
   boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
   score: {fileID: 1542924424759971473, guid: b4ead6aaf79ff91488402297bdd59088, type: 3}
+  hurtAudio: {fileID: 8300000, guid: c1a5f2757fb06fd45812883f28dbf66b, type: 3}
+  dead: {fileID: 8300000, guid: 10ea50ad52f85f04d99128c58ee3b632, type: 3}
+  birdCollision: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
 --- !u!50 &931667206
 Rigidbody2D:
   serializedVersion: 4
@@ -2761,6 +2806,18 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1017948225
       objectReference: {fileID: 0}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: hurtAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 53dea70923c95cb45864ff65eeb38785, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: birdCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
 --- !u!1 &1089404251
@@ -3416,6 +3473,9 @@ MonoBehaviour:
   rightLine: {fileID: 927787099}
   leftPos: {fileID: 224594796}
   boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
+  smooth: 3
+  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!58 &1488757441
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3953,6 +4013,9 @@ MonoBehaviour:
   hurt: {fileID: -197115947, guid: bf7a92f99052a16409781348331c4e42, type: 3}
   boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
   score: {fileID: 1542924424759971473, guid: b4ead6aaf79ff91488402297bdd59088, type: 3}
+  hurtAudio: {fileID: 8300000, guid: c1a5f2757fb06fd45812883f28dbf66b, type: 3}
+  dead: {fileID: 8300000, guid: 10ea50ad52f85f04d99128c58ee3b632, type: 3}
+  birdCollision: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
 --- !u!50 &1837841777
 Rigidbody2D:
   serializedVersion: 4
@@ -4350,6 +4413,10 @@ PrefabInstance:
       value: -1017948225
       objectReference: {fileID: 0}
     - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
       propertyPath: hurt
       value: 
       objectReference: {fileID: -1642029259, guid: 9df880868bd1b6944a1b45e61cb7a50d, type: 3}
@@ -4361,6 +4428,14 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: hurtAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 53dea70923c95cb45864ff65eeb38785, type: 3}
+    - target: {fileID: 8418270671087588174, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
+      propertyPath: birdCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb2cd28665e3af41a551946f763738c, type: 3}
 --- !u!1 &2105151761

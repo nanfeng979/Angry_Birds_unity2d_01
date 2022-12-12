@@ -151,3 +151,6 @@ MonoBehaviour:
   hurt: {fileID: 754468482, guid: 9df880868bd1b6944a1b45e61cb7a50d, type: 3}
   boom: {fileID: 7369392007024611513, guid: 61b3b605777411b43a1069e8f6ff035e, type: 3}
   score: {fileID: 0}
+  hurtAudio: {fileID: 0}
+  dead: {fileID: 0}
+  birdCollision: {fileID: 0}
