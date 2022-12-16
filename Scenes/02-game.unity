@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bird_Reds:
   - {fileID: 538473121}
-  - {fileID: 0}
+  - {fileID: 438067996}
   - {fileID: 1488757440}
   pig_Greens:
   - {fileID: 1837841776}
