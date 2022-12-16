@@ -8,12 +8,15 @@ public class Green_Bird : Bird_red
     {
         base.useSkill();
 
-        // 获取当前刚体的速度
-        Vector3 speed = rg.velocity;
-
         // 改变当前刚体速度的x轴方向
+        Vector3 speed = rg.velocity;
         speed.x *= -1;
         rg.velocity = speed;
+
+        // 改变当前对象的x轴方向
+        Vector3 scale = gameObject.transform.localScale;
+        scale.x *= -1;
+        gameObject.transform.localScale = scale;
 
     }
 }
