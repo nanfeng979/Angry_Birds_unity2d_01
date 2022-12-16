@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 231147666}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: env
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4012,6 +4012,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6172845631278634720, guid: b1e1b8630dfb000498e67d63f2296374, type: 3}
+      propertyPath: hurt
+      value: 
+      objectReference: {fileID: -95687121, guid: bf7a92f99052a16409781348331c4e42, type: 3}
+    - target: {fileID: 6172845631278634720, guid: b1e1b8630dfb000498e67d63f2296374, type: 3}
       propertyPath: leftPos
       value: 
       objectReference: {fileID: 224594796}
@@ -4137,6 +4141,10 @@ PrefabInstance:
       value: Bird_red (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7377823067710169829, guid: 18de67f02b8a7ae43a8d7de6c00ee6d0, type: 3}
+      propertyPath: hurt
+      value: 
+      objectReference: {fileID: -1364618824, guid: bf7a92f99052a16409781348331c4e42, type: 3}
+    - target: {fileID: 7377823067710169829, guid: 18de67f02b8a7ae43a8d7de6c00ee6d0, type: 3}
       propertyPath: leftPos
       value: 
       objectReference: {fileID: 224594796}
@@ -4171,11 +4179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7891928208822487949, guid: 0fd217053923f80409081bab74751c57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.19
+      value: -8.15
       objectReference: {fileID: 0}
     - target: {fileID: 7891928208822487949, guid: 0fd217053923f80409081bab74751c57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.87
+      value: -2.68
       objectReference: {fileID: 0}
     - target: {fileID: 7891928208822487949, guid: 0fd217053923f80409081bab74751c57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4209,6 +4217,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7891928208822487951, guid: 0fd217053923f80409081bab74751c57, type: 3}
+      propertyPath: hurt
+      value: 
+      objectReference: {fileID: 1767648832, guid: bf7a92f99052a16409781348331c4e42, type: 3}
     - target: {fileID: 7891928208822487951, guid: 0fd217053923f80409081bab74751c57, type: 3}
       propertyPath: leftPos
       value: 

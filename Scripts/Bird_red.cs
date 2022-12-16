@@ -43,9 +43,14 @@ public class Bird_red : MonoBehaviour
     // 是否能使用技能
     private bool canUseSkill = false;
 
+    // 获取小鸟受伤样式
+    public Sprite hurt;
+    private SpriteRenderer hurtRender;
+
     private void Awake() {
         sp = GetComponent<SpringJoint2D>();
         rg = GetComponent<Rigidbody2D>();
+        hurtRender = GetComponent<SpriteRenderer>();
     }
 
     private void Update() {
@@ -77,8 +82,18 @@ public class Bird_red : MonoBehaviour
     }
     
     // 碰到物体时
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter2D(Collision2D other) {
+        Debug.Log("123");
         canUseSkill = false;
+
+        // 刚体x轴速度过小则不会受伤
+        if(rg.velocity.x > 0.3f)
+        {
+            // 渲染小鸟受伤样式
+            hurtRender.sprite = hurt;
+        }
+            
+        
     }
 
     private void OnMouseDown() {
