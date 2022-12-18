@@ -62,6 +62,7 @@ public class GameObjectManager : MonoBehaviour
 
     public void afterBirdFly()
     {
+        init();
         // 检查pig_Greens与bird_Reds的数量
         if(pig_Greens.Count <= 0)
         {
@@ -70,12 +71,14 @@ public class GameObjectManager : MonoBehaviour
             showStarts();
             Debug.Log("赢了");
         }
-        if(bird_Reds.Count >= pig_Greens.Count)
-        {
-            // bird_Reds比pig_Greens多时
-            // 初始化
-            init();
-        } else {
+        // if(bird_Reds.Count >= pig_Greens.Count)
+        // {
+        //     // bird_Reds比pig_Greens多时
+        //     // 初始化
+        //     init();
+        // } 
+        // else {
+        if(pig_Greens.Count > 0 && bird_Reds.Count == 0) {
             lose.SetActive(true);
             Debug.Log("输了");
         }

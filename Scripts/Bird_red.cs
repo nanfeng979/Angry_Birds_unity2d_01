@@ -83,7 +83,9 @@ public class Bird_red : MonoBehaviour
     
     // 碰到物体时
     private void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log("123");
+        if(other.gameObject.tag == "Player") {
+            return;
+        }
         canUseSkill = false;
 
         // 刚体x轴速度过小则不会受伤

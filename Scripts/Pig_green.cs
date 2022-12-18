@@ -57,7 +57,7 @@ public class Pig_green : MonoBehaviour
 
     }
 
-    void Dead() {
+    public void Dead() {
         // 播放音效
         GameObjectManager.instance.AudioPlay(dead);
 
