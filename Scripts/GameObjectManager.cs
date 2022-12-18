@@ -95,7 +95,7 @@ public class GameObjectManager : MonoBehaviour
         // 根据游戏逻辑显示星星个数，目前暂且全部显示
         for(int i = 0; i < 3; i++)
         {
-            // 等待0.2f执行
+            // 等待0.3f执行
             yield return new WaitForSeconds(0.3f);
             // 显示星星
             starts[i].SetActive(true);

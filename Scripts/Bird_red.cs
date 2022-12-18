@@ -57,7 +57,7 @@ public class Bird_red : MonoBehaviour
         // 按下R键复原
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0); // 加载场景，0 是默认的第一个场景
+            SceneManager.LoadScene(2); // 加载场景，0 是默认的第一个场景
             // Time.timeScale = 1; // 恢复正常时间
             return;
         }
