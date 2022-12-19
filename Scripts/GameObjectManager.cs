@@ -105,11 +105,13 @@ public class GameObjectManager : MonoBehaviour
     // 
     public void Replay()
     {
+        SaveData();
         SceneManager.LoadScene(2);
     }
 
     public void Home()
     {
+        SaveData();
         SceneManager.LoadScene(1);
     }
 
@@ -117,5 +119,10 @@ public class GameObjectManager : MonoBehaviour
     public void AudioPlay(AudioClip clip)
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
+    }
+
+    public void SaveData() {
+        // 默认获得三颗星
+        PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 3);
     }
 }
