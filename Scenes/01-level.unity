@@ -402,7 +402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459561438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 475102895}
   - component: {fileID: 475102897}
   - component: {fileID: 475102896}
+  - component: {fileID: 475102898}
   m_Layer: 5
   m_Name: map2
   m_TagString: Untagged
@@ -540,6 +541,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475102894}
   m_CullTransparentMesh: 1
+--- !u!114 &475102898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475102894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b800337829da147aaf55feca3a4f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starsCount: 0
+  canSelct: 0
+  lock_: {fileID: 0}
+  stars: {fileID: 0}
 --- !u!1 &633215249
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +940,7 @@ GameObject:
   - component: {fileID: 931865462}
   - component: {fileID: 931865464}
   - component: {fileID: 931865463}
+  - component: {fileID: 931865465}
   m_Layer: 5
   m_Name: map1
   m_TagString: Untagged
@@ -990,6 +1008,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931865461}
   m_CullTransparentMesh: 1
+--- !u!114 &931865465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931865461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b800337829da147aaf55feca3a4f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starsCount: 0
+  canSelct: 0
+  lock_: {fileID: 0}
+  stars: {fileID: 0}
 --- !u!1 &993755450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1655228577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1960,7 +1994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1907950975
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2031,6 +2065,7 @@ GameObject:
   - component: {fileID: 1916899376}
   - component: {fileID: 1916899378}
   - component: {fileID: 1916899377}
+  - component: {fileID: 1916899379}
   m_Layer: 5
   m_Name: map3
   m_TagString: Untagged
@@ -2098,6 +2133,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916899375}
   m_CullTransparentMesh: 1
+--- !u!114 &1916899379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916899375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b800337829da147aaf55feca3a4f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starsCount: 0
+  canSelct: 0
+  lock_: {fileID: 0}
+  stars: {fileID: 0}
 --- !u!1 &1936022896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2145266101
 RectTransform:
   m_ObjectHideFlags: 0
