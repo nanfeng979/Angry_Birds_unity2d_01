@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Level_Select : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Level_Select : MonoBehaviour
     public void Selected() {
         if(canSelect) {
             PlayerPrefs.SetString("nowLevel", "level" + gameObject.name);
+            // 切换场景
+            SceneManager.LoadScene(2);
         }
     }
 
