@@ -29,4 +29,10 @@ public class Level_Select : MonoBehaviour
         }
     }
 
+    public void Selected() {
+        if(canSelect) {
+            
+        }
+    }
+
 }
