@@ -1464,6 +1464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &417540870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,6 +1605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &422986342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,6 +1746,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars:
+  - {fileID: 1100595679}
+  - {fileID: 1621447221}
+  - {fileID: 216096484}
 --- !u!114 &423225847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,6 +1902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &423789171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,6 +2859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &707312945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3176,6 +3184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &783826410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3421,6 +3430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &850423338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3561,6 +3571,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars:
+  - {fileID: 263318600}
+  - {fileID: 1558151314}
+  - {fileID: 1397175324}
 --- !u!114 &865921788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5899,6 +5913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &1461420896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6705,6 +6720,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars:
+  - {fileID: 1996711272}
+  - {fileID: 1900336728}
+  - {fileID: 609298113}
 --- !u!114 &1530967493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7009,6 +7028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars: []
 --- !u!114 &1603507906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7263,6 +7283,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 0
   levelBg: {fileID: -2057589706, guid: cd1eb7158aa957b4aa0a1349a089d36c, type: 3}
+  stars:
+  - {fileID: 1155699503}
+  - {fileID: 322198144}
+  - {fileID: 325531400}
 --- !u!114 &1636826496
 MonoBehaviour:
   m_ObjectHideFlags: 0
