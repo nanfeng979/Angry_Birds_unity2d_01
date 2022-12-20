@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+// panel23就改bg颜色，分23阶段
 public class GameObjectManager : MonoBehaviour
 {
     // 单例
@@ -24,6 +26,8 @@ public class GameObjectManager : MonoBehaviour
     // 星星数组界面
     public GameObject[] starts;
 
+
+    private int guanqiaNum = 4;
 
     private void Awake() {
         instance = this;
@@ -124,5 +128,16 @@ public class GameObjectManager : MonoBehaviour
     public void SaveData() {
         // 默认获得三颗星
         PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 3);
+        // if(startNum > PlayerPrefs.GetInt(PlayerPrefs.GetString("nowLevel"))) {
+
+        // }
+
+        // 计算所有关卡的星星数量
+        int sum = 0;
+        for(int i = 1; i <= guanqiaNum; i++) {
+            sum += PlayerPrefs.GetInt(PlayerPrefs.GetString("level" + i.ToString()));
+        }
+        // 
+        PlayerPrefs.SetInt("totalNum", sum);
     }
 }
