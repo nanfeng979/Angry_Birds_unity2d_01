@@ -18,6 +18,7 @@ public class MapSelect : MonoBehaviour
         if(PlayerPrefs.GetInt("totalNum", 0) >= starsCount) {
             canSelect = true;
         }
+        // PlayerPrefs.SetInt("totalNum", 0);
 
         if(canSelect) {
             lock_.SetActive(false);

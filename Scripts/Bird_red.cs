@@ -76,6 +76,13 @@ public class Bird_red : MonoBehaviour
             return;
         }
 
+        // 按S初始化所有关卡的星星个数
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            PlayerPrefs.SetInt("totalNum", 0);
+            return;
+        }
+
         // 相机跟随
         // 小鸟的x轴位置
         float posX = transform.position.x;
