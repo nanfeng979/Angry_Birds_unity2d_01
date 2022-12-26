@@ -62,10 +62,17 @@ public class Bird_red : MonoBehaviour
             return;
         }
         
-        // 清除星星
+        // 按Q清除当前关卡的星星
         if(Input.GetKeyDown(KeyCode.Q))
         {
             PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 0);
+            return;
+        }
+
+        // 按W加满当前关卡的星星
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 3);
             return;
         }
 
