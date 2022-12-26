@@ -22,10 +22,17 @@ public class Level_Select : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // 当前组件已加载
+        // 判断当前是否是第一关
         if(transform.parent.GetChild(0).name == gameObject.name) {
             // 则可以被选中
             canSelect = true;
+        } else {
+            // 如果非第一关且前一关的值是否大于0
+            int preNum = int.Parse(gameObject.name.Substring(2)) - 1;
+            if(PlayerPrefs.GetInt("level" + gameObject.name.Substring(0, 2) + preNum) > 0) {
+                // 后续的关卡解锁
+                canSelect =true;
+            }
         }
 
         if(canSelect) {
