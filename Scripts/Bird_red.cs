@@ -61,18 +61,12 @@ public class Bird_red : MonoBehaviour
             // Time.timeScale = 1; // 恢复正常时间
             return;
         }
-        
-        // 按Q清除当前关卡的星星
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 0);
-            return;
-        }
 
         // 按W加满当前关卡的星星
         if(Input.GetKeyDown(KeyCode.W))
         {
             PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 3);
+            GameObjectManager.instance.SaveData();
             return;
         }
 
@@ -80,6 +74,11 @@ public class Bird_red : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.S))
         {
             PlayerPrefs.SetInt("totalNum", 0);
+            for(int i = 1; i <= 4; i++) {
+                PlayerPrefs.SetInt(PlayerPrefs.GetString("levelNo" + i.ToString()), 0);
+                PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 0);
+                //PlayerPrefs.SetInt("level" + i, 0);
+            }
             return;
         }
 

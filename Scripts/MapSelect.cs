@@ -15,10 +15,19 @@ public class MapSelect : MonoBehaviour
     public GameObject map;
 
     private void Start() {
+        // 计算所有关卡的星星数量
+        int sum = 0;
+        for(int i = 1; i <= 4; i++) {
+            sum += PlayerPrefs.GetInt("levelNo" + i);
+        }
+        // 
+        PlayerPrefs.SetInt("totalNum", sum);
+
         if(PlayerPrefs.GetInt("totalNum", 0) >= starsCount) {
             canSelect = true;
         }
-        // PlayerPrefs.SetInt("totalNum", 0);
+        
+        Debug.Log(PlayerPrefs.GetInt("totalNum"));
 
         if(canSelect) {
             lock_.SetActive(false);
