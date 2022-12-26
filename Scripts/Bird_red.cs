@@ -61,6 +61,13 @@ public class Bird_red : MonoBehaviour
             // Time.timeScale = 1; // 恢复正常时间
             return;
         }
+        
+        // 清除星星
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), 0);
+            return;
+        }
 
         // 相机跟随
         // 小鸟的x轴位置
